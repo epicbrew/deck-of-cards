@@ -1,0 +1,72 @@
+package com.mshildt.cards;
+
+/**
+ * Represents a single card in a @Deck.
+ */
+public class Card {
+
+    /**
+     * Represents a card's rank (or value).
+     */
+    public enum Rank {
+        TWO,
+        THREE,
+        FOUR,
+        FIVE,
+        SIX,
+        SEVEN,
+        EIGHT,
+        NINE,
+        TEN,
+        JACK,
+        QUEEN,
+        KING,
+        ACE
+    }
+
+    /**
+     * Represents a card's suit.
+     */
+    public enum Suit {
+        HEART,
+        DIAMOND,
+        SPADE,
+        CLUB
+    }
+
+    /**
+     * The card's rank (immutable).
+     */
+    private final Rank rank;
+
+    /**
+     * The card's suit (immutable).
+     */
+    private final Suit suit;
+
+    /**
+     * Constructor.
+     * @param rank The rank of the card.
+     * @param suit The suit of the card.
+     */
+    public Card(Rank rank, Suit suit) {
+        this.rank = rank;
+        this.suit = suit;
+    }
+
+    /**
+     * Get the card's rank.
+     * @return Card's rank.
+     */
+    public Rank getRank() {
+        return rank;
+    }
+
+    /**
+     * Get the card's suit.
+     * @return Card's suit.
+     */
+    public Suit getSuit() {
+        return suit;
+    }
+}
