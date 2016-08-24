@@ -28,10 +28,10 @@ public class Card {
      * Represents a card's suit.
      */
     public enum Suit {
-        HEART,
-        DIAMOND,
-        SPADE,
-        CLUB
+        HEARTS,
+        DIAMONDS,
+        SPADES,
+        CLUBS
     }
 
     /**
