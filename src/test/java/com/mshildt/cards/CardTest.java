@@ -8,9 +8,9 @@ import org.junit.Test;
 public class CardTest {
     @Test
     public void canConstruct() {
-        Card myCard = new Card(Card.Rank.ACE, Card.Suit.SPADE);
+        Card myCard = new Card(Card.Rank.ACE, Card.Suit.SPADES);
 
         assertEquals(myCard.getRank(), Card.Rank.ACE);
-        assertEquals(myCard.getSuit(), Card.Suit.SPADE);
+        assertEquals(myCard.getSuit(), Card.Suit.SPADES);
     }
 }
