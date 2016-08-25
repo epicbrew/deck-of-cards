@@ -1,6 +1,7 @@
 package com.mshildt.cards;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Represents a deck of cards with one of each card.
@@ -19,13 +20,7 @@ public class DefaultDeck extends AbstractDeck {
      * unspecified, but unshuffled order.
      */
     @Override
-    protected void initCards() {
-        cards = new ArrayList<>();
-
-        for (Card.Suit suit : Card.Suit.values()) {
-            for (Card.Rank rank : Card.Rank.values()) {
-                cards.add(new Card(rank, suit));
-            }
-        }
+    void initCards() {
+        cards = new ArrayList<>(Arrays.asList(Card.getAllCards()));
     }
 }

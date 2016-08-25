@@ -70,6 +70,21 @@ public class Card {
         return suit;
     }
 
+
+    public static Card[] getAllCards() {
+        Card[] cards = new Card[52];
+
+        int i = 0;
+        for (Suit suit : Suit.values()) {
+            for (Rank rank : Rank.values()) {
+                cards[i] = new Card(rank, suit);
+                i++;
+            }
+        }
+
+        return cards;
+    }
+
     @Override
     public String toString() {
         return this.rank.toString() + " of " + this.suit.toString();
