@@ -1,32 +1,30 @@
 package com.mshildt.cards;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Test;
 
+import static org.junit.Assert.*;
+
 /**
- * Tests for DefaultDeck.
+ * Tests for PinochleDeck.
  */
-public class DefaultDeckTest {
+public class PinochleDeckTest {
 
     @Test
     public void canConstruct() {
-        DefaultDeck deck = new DefaultDeck();
-        assertEquals(52, deck.numCards());
+        PinochleDeck deck = new PinochleDeck();
+        assertEquals(48, deck.numCards());
     }
 
     @Test
     public void canShuffle() {
-        DefaultDeck deck = new DefaultDeck();
+        PinochleDeck deck = new PinochleDeck();
         deck.shuffle();
         //deck.printCards();
     }
 
     @Test
     public void canDealOneCard() {
-        DefaultDeck deck = new DefaultDeck();
+        PinochleDeck deck = new PinochleDeck();
 
         Card topCard = deck.cards.get(0);
         Card dealtCard = deck.dealOneCard();
@@ -36,7 +34,7 @@ public class DefaultDeckTest {
 
     @Test
     public void hasMoreCardsWorks() {
-        DefaultDeck deck = new DefaultDeck();
+        PinochleDeck deck = new PinochleDeck();
 
         int numCards = deck.numCards();
 
