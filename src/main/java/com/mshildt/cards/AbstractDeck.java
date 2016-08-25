@@ -30,11 +30,19 @@ public abstract class AbstractDeck {
 
     /**
      * Deals one card from the top of the deck.
-     * @throws DeckExhaustedException if the deck is empty.
+     * @throws EmptyDeckException if the deck is empty.
      * @return Card from the top of the deck.
      */
-    public Card dealOneCard() {
-        Card card = cards.remove(0);
+    public Card dealOneCard() throws EmptyDeckException {
+        Card card;
+
+        try {
+            card = cards.remove(0);
+        }
+        catch (IndexOutOfBoundsException ex) {
+            throw new EmptyDeckException("no cards left in deck", ex);
+        }
+
         return card;
     }
 

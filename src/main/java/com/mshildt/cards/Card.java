@@ -70,7 +70,11 @@ public class Card {
         return suit;
     }
 
-
+    /**
+     * Returns an array containing a card for every rank/suit.
+     * i.e. The standard 52 card deck.
+     * @return array of all possible cards.
+     */
     public static Card[] getAllCards() {
         Card[] cards = new Card[52];
 
