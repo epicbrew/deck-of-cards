@@ -1,6 +1,9 @@
 package com.mshildt.cards;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
 
 /**
@@ -18,7 +21,7 @@ public class DefaultDeckTest {
     public void canShuffle() {
         DefaultDeck deck = new DefaultDeck();
         deck.shuffle();
-        deck.printCards();
+        //deck.printCards();
     }
 
     @Test
@@ -29,5 +32,19 @@ public class DefaultDeckTest {
         Card dealtCard = deck.dealOneCard();
 
         assertEquals(dealtCard, topCard);
+    }
+
+    @Test
+    public void hasMoreCardsWorks() {
+        DefaultDeck deck = new DefaultDeck();
+
+        int numCards = deck.numCards();
+
+        for (int i = 0; i < numCards; i++) {
+            assertTrue(deck.hasMoreCards());
+            deck.dealOneCard();
+        }
+
+        assertFalse(deck.hasMoreCards());
     }
 }

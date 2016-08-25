@@ -1,7 +1,7 @@
 package com.mshildt.cards;
 
 /**
- * Represents a single card in a @Deck.
+ * Represents a single card in a Deck.
  */
 public class Card {
 
@@ -72,6 +72,6 @@ public class Card {
 
     @Override
     public String toString() {
-        return "" + this.rank.toString() + " of " + this.suit.toString();
+        return this.rank.toString() + " of " + this.suit.toString();
     }
 }
