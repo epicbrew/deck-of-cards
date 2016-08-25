@@ -4,29 +4,30 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 /**
- * Created by mshildt on 8/23/16.
+ * Tests for DefaultDeck.
  */
 public class DefaultDeckTest {
 
     @Test
     public void canConstruct() {
         DefaultDeck deck = new DefaultDeck();
-        System.out.println("\n---- CARDS ----");
-        deck.printCards();
+        assertEquals(deck.numCards(), 52);
     }
 
     @Test
     public void canShuffle() {
         DefaultDeck deck = new DefaultDeck();
         deck.shuffle();
-        System.out.println("\n---- CARDS ----");
         deck.printCards();
     }
 
     @Test
     public void canDealOneCard() {
         DefaultDeck deck = new DefaultDeck();
-        Card card = deck.dealOneCard();
-        System.out.println("canDealOneCard: " + card);
+
+        Card topCard = deck.cards.get(0);
+        Card dealtCard = deck.dealOneCard();
+
+        assertEquals(dealtCard, topCard);
     }
 }

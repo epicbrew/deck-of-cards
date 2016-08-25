@@ -13,4 +13,22 @@ public class CardTest {
         assertEquals(myCard.getRank(), Card.Rank.ACE);
         assertEquals(myCard.getSuit(), Card.Suit.SPADES);
     }
+
+    @Test
+    public void getRankWorks() {
+        Card myCard = new Card(Card.Rank.FIVE, Card.Suit.DIAMONDS);
+        assertEquals(myCard.getRank(), Card.Rank.FIVE);
+    }
+
+    @Test
+    public void getSuitWorks() {
+        Card myCard = new Card(Card.Rank.FIVE, Card.Suit.DIAMONDS);
+        assertEquals(myCard.getSuit(), Card.Suit.DIAMONDS);
+    }
+
+    @Test
+    public void toStringWorks() {
+        Card myCard = new Card(Card.Rank.EIGHT, Card.Suit.CLUBS);
+        assertEquals("EIGHT of CLUBS", myCard.toString());
+    }
 }

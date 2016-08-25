@@ -47,6 +47,14 @@ public abstract class AbstractDeck {
     }
 
     /**
+     * Returns the number of cards in the deck.
+     * @return Number of remaining cards in this deck.
+     */
+    public int numCards() {
+        return cards.size();
+    }
+
+    /**
      * Prints the cards in the deck to stdout.
      */
     public void printCards() {
