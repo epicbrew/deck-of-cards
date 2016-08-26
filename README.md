@@ -15,7 +15,7 @@ To compile and build jar file:
 
     mvn package
 
-## Usage
+## Details
 
 My solution provides a Card class representing a playing card along with an
 abstract deck that can be used as a base class for implementing different
