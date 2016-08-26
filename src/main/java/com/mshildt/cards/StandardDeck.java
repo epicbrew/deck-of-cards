@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * Represents a deck of cards with one of each card.
+ * Represents a standard deck of cards with one of each card.
  */
-public class DefaultDeck extends AbstractDeck {
+public class StandardDeck extends AbstractDeck {
 
     /**
      * Default constructor.
      */
-    public DefaultDeck() {
+    public StandardDeck() {
         initCards();
     }
 

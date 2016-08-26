@@ -8,20 +8,20 @@ import static org.junit.Assert.fail;
 import org.junit.Test;
 
 /**
- * Tests for DefaultDeck.
+ * Tests for StandardDeck.
  */
-public class DefaultDeckTest {
+public class StandardDeckTest {
 
     @Test
     public void canConstruct() {
-        DefaultDeck deck = new DefaultDeck();
+        StandardDeck deck = new StandardDeck();
         assertEquals(52, deck.numCards());
     }
 
     @Test
     public void shuffleWorks() throws EmptyDeckException {
-        DefaultDeck unshuffledDeck = new DefaultDeck();
-        DefaultDeck shuffledDeck = new DefaultDeck();
+        StandardDeck unshuffledDeck = new StandardDeck();
+        StandardDeck shuffledDeck = new StandardDeck();
 
         shuffledDeck.shuffle();
 
@@ -43,14 +43,14 @@ public class DefaultDeckTest {
         //
         // This is kind of a low bar for validating the shuffle algorithm, but
         // quantifying the randomness of the shuffled deck against the unshuffled
-        // one is a fairly involved problem.
+        // one is beyond the scope of this test.
         //
         assertTrue(differences > 10);
     }
 
     @Test
     public void canDealOneCard() {
-        DefaultDeck deck = new DefaultDeck();
+        StandardDeck deck = new StandardDeck();
 
         Card topCard = deck.cards.get(0);
         Card dealtCard = null;
@@ -67,7 +67,7 @@ public class DefaultDeckTest {
 
     @Test
     public void hasMoreCardsWorks() {
-        DefaultDeck deck = new DefaultDeck();
+        StandardDeck deck = new StandardDeck();
 
         int numCards = deck.numCards();
 
