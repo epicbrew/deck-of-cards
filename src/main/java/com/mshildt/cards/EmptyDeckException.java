@@ -6,10 +6,16 @@ package com.mshildt.cards;
  */
 public class EmptyDeckException extends Exception {
 
+    /**
+     * {@inheritDoc}
+     */
     public EmptyDeckException(String message) {
         super(message);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public EmptyDeckException(String message, Throwable throwable) {
         super(message, throwable);
     }

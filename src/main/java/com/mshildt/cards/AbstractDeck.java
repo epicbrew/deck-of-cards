@@ -7,6 +7,10 @@ import java.util.concurrent.ThreadLocalRandom;
  * Abstract deck class containing common methods among deck implementations.
  */
 public abstract class AbstractDeck {
+
+    /**
+     * List containing this deck's cards.
+     */
     protected List<Card> cards;
 
     /**

@@ -21,6 +21,6 @@ public class DefaultDeck extends AbstractDeck {
      */
     @Override
     void initCards() {
-        cards = new ArrayList<>(Arrays.asList(Card.getAllCards()));
+        this.cards = new ArrayList<>(Arrays.asList(Card.getAllCards()));
     }
 }
